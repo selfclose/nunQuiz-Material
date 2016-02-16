@@ -1,41 +1,18 @@
-app.config ($stateProvider, $urlRouterProvider) ->
+app.config [
+    '$routeProvider'
+    ($routeProvider) ->
+        $routeProvider
 
-    $stateProvider
+        .when('/home',
+            templateUrl: 'templates/home.html'
+            controller: 'homeCtrl')
 
-    .state 'tab',
-        url: '/tab'
-        abstract: true
-        templateUrl: 'templates/tabs.html'
+        .when('/showOrders',
+            templateUrl: 'templates/show-orders.html'
+            controller: 'ShowOrdersController')
 
-#------------------ Tab Split -----------------#
-    .state 'tab.login',
-        url: '/login'
-        views:
-            'tab-dash':
-                templateUrl: 'templates/tab-dash.html'
-                controller: 'LoginCtrl'
+        .otherwise redirectTo: '/home'
+    ]
 
-    .state 'tab.main',
-        url: '/main'
-        views:
-            'tab-dash':
-                templateUrl: 'templates/page-main.html'
-                controller: 'MainCtrl'
-
-#------------------ Tab Split -----------------#
-    .state 'tab.card',
-        url: '/card'
-        views:
-            'tab-card':
-                templateUrl: 'templates/tab-card.html'
-                controller: 'CardCtrl'
-
-    .state 'tab.account',
-        url: '/account'
-        views:
-            'tab-account':
-                templateUrl: 'templates/tab-account.html'
-                controller: 'AccountCtrl'
-
-        $urlRouterProvider.otherwise '/tab/login'
-    return
+app.config ($mdIconProvider) ->
+    $mdIconProvider.fontSet 'fa', 'fontawesome'

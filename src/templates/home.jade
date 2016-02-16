@@ -1,0 +1,9 @@
+.md-grid(layout='column', ng-cloak='')
+    div(layout='row', layout-align='center center')
+        h4 {{title}}
+
+    md-grid-list(flex='', layout='row', layout-wrap='', layout-align='center center')
+        md-list-item(flex='2', ng-repeat='item in items')
+            md-button.md-grid-item-content(ng-click='listItemClick($index)')
+                md-icon(md-svg-src='{{item.icon}}')
+                .md-grid-text  {{ item.name }}

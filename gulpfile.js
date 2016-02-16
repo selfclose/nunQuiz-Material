@@ -12,6 +12,7 @@ var paths = {
   coffee: [
       './src/coffee/app.coffee',
       './src/coffee/routing.coffee',
+      './src/coffee/config.coffee',
       './src/coffee/controllers/**/*.coffee'
   ]
 };

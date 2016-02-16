@@ -1,0 +1,54 @@
+body {
+    cursor: url('http://ionicframework.com/img/finger.png'), auto;
+}
+h2,h4 {
+    text-align: center;
+}
+
+.center-red {
+    text-align: center;
+    color: red;
+}
+
+.card-small {
+    height: 60vh;
+    text-align: center;
+}
+
+.card-tiny {
+    width: 30%;
+}
+
+.card-full {
+    width: 100%;
+}
+
+#lightName {
+    font-size: xx-large !important;
+    color: #333;
+}
+
+.filter-gray {
+    -webkit-filter: grayscale(100%); /* Chrome, Safari, Opera */
+    filter: grayscale(100%);
+}
+
+.gray {
+    background-color: #666;
+}
+
+//----- table -----//
+table { width:100% }
+table, th , td  {
+    border: 1px solid grey;
+    border-collapse: collapse;
+    padding: 5px;
+    text-align: center;
+    vertical-align: middle;
+}
+table tr:nth-child(odd)	{
+    background-color: #f1f1f1;
+}
+table tr:nth-child(even) {
+    background-color: #ffffff;
+}
