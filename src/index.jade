@@ -4,7 +4,7 @@ html
         meta(charset="utf-8")
         meta(name="viewport", content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width")
         title
-        link(href="lib/angular-material/angular-material.min.css", rel="stylesheet")
+        link(href="lib/angular-material/angular-material.css", rel="stylesheet")
         link(href="css/style.css", rel="stylesheet")
 
         //script(src="lib/ionic/js/ionic.bundle.js")
@@ -14,4 +14,21 @@ html
         script(src="lib/angular-aria/angular-aria.min.js")
         script(src="lib/angular-messages/angular-messages.min.js")
         script(src="lib/angular-ui-router/release/angular-ui-router.min.js")
+
+        script(src="js/script.js")
         //script(src="cordova.js")
+        - var iconMenu = 'lib/angular-material/demos/toolbar/demoBasicUsage/img/icons/menu.svg'
+        - var iconFav = 'lib/angular-material/demos/toolbar/demoBasicUsage/img/icons/favorite.svg'
+
+        body(ng-app="QuizApp")
+            ng-view
+                md-content
+                    md-toolbar
+                        .md-toolbar-tools
+                            md-button.md-icon-button(aria-label='Settings')
+                                md-icon(md-svg-icon='#{iconMenu}')
+                            h2 THIS IS
+                            span(flex='')
+                            md-button.md-raised(aria-label='Learn More') Learn More
+                            md-button.md-fab.md-mini(aria-label='Favorite')
+                                md-icon(md-svg-icon='#{iconFav}')
