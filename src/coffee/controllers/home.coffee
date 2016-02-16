@@ -11,6 +11,7 @@ app.controller 'homeCtrl', ($scope, $location) ->
         {
             name: 'แบบทดสอบ'
             icon: 'mail'
+            path: '/quiz-select'
         }
         {
             name: 'สถิติ'
@@ -31,8 +32,8 @@ app.controller 'homeCtrl', ($scope, $location) ->
     ]
 
     $scope.listItemClick = ($index) ->
-        clickedItem = $scope.items[$index]
-        $location.path('/quiz-select')
+        clickedItem = $scope.items[$index].path
+        $location.path(clickedItem)
         return
 
     return

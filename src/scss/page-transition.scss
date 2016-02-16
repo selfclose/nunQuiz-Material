@@ -2,7 +2,7 @@
 /* positioned absolutely so that the pages can overlap each other as they enter and leave */
 //https://scotch.io/tutorials/animating-angularjs-apps-ngview
 //ตัวนี้ต้องใช้ 'ngRoute', 'ngAnimate' เพื่อ Trigger ng-Enter, ng-Leave
-.page        {
+.page {
     //bottom:0;
     //padding-top:200px;
     position:absolute;

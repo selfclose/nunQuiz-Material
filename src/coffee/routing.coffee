@@ -11,6 +11,14 @@ app.config [
             templateUrl: 'templates/quiz-select.html'
             controller: 'quizSelectCtrl')
 
+        .when('/quiz-exam',
+            templateUrl: 'templates/quiz-exam.html'
+            controller: 'quizExamCtrl')
+
+        .when('/profile',
+            templateUrl: 'templates/profile.html'
+            controller: 'profileCtrl')
+
         .otherwise redirectTo: '/home'
     ]
 

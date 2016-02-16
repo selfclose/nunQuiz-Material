@@ -1,38 +1,28 @@
 app.controller 'quizSelectCtrl', ($scope, $location) ->
 
-    $scope.title = 'YOYOYOYO'
+    $scope.text = {
+        title: 'แบบทดสอบ'
+        menuHead: 'รายชื่อแบบทดสอบ'
+    }
 
-    $scope.items = [
+    $scope.subject = [
         {
-            name: 'บทเรียน'
+            name: 'ภาษาบาลี'
             icon: 'hangout'
 
         }
         {
-            name: 'แบบทดสอบ'
+            name: 'ภาษาอังกฤษ'
             icon: 'mail'
         }
         {
-            name: 'สถิติ'
+            name: 'ภาษาไทย'
             icon: 'message'
-        }
-        {
-            name: 'Copy'
-            icon: 'copy2'
-        }
-        {
-            name: 'Facebook'
-            icon: 'facebook'
-        }
-        {
-            name: 'Twitter'
-            icon: 'twitter'
         }
     ]
 
-    $scope.listItemClick = ($index) ->
-        clickedItem = $scope.items[$index]
-        $location.path()
+    $scope.listItemClick = () ->
+        $location.path('/quiz-exam')
         return
 
     return

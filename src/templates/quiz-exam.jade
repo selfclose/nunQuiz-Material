@@ -1,0 +1,11 @@
+div(layout='row', layout-align='center center')
+    h4 {{text.title}}
+
+form(ng-submit='submit()', ng-cloak='')
+    div.md-padding(ng-repeat='ch in exam')
+        p ข้อที่ {{$index + 1}} : {{ch.question}}
+        md-radio-group(ng-model="ch.selecting", flex='')
+            md-radio-button(ng-repeat='ans in ch.choice', value='{{$index}}') {{ans}}
+
+        p(style='text-align: right') ตอบข้อ: {{ch.selecting=='-1'?'ยังไม่ได้ตอบ': ch.choice[ch.selecting]}}
+        hr
