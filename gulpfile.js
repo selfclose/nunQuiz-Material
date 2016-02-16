@@ -27,6 +27,7 @@ gulp.task('do_jade', function(){
 gulp.task('do_sass', function(){
   gulp.src(paths.scss)
       .pipe(sass())
+      .pipe(concat('style.css'))
       .pipe(gulp.dest('./www/css'))
       .pipe(browserSync.stream());
 });

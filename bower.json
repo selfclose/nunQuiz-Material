@@ -6,6 +6,8 @@
     "angular-material": "^1.0.5",
     "angular-ui-router": "^0.2.18",
     "angular-route": "^1.5.0",
-    "font-awesome": "fontawesome#^4.5.0"
+    "font-awesome": "fontawesome#^4.5.0",
+    "animate.css": "daneden#^3.5.1",
+    "angular-animate": "^1.5.0"
   }
 }

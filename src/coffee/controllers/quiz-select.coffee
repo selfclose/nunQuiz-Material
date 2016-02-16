@@ -1,6 +1,6 @@
-app.controller 'homeCtrl', ($scope, $location) ->
+app.controller 'quizSelectCtrl', ($scope, $location) ->
 
-    $scope.title = 'Welcome to Quiz'
+    $scope.title = 'YOYOYOYO'
 
     $scope.items = [
         {
@@ -32,7 +32,7 @@ app.controller 'homeCtrl', ($scope, $location) ->
 
     $scope.listItemClick = ($index) ->
         clickedItem = $scope.items[$index]
-        $location.path('/quiz-select')
+        $location.path()
         return
 
     return
